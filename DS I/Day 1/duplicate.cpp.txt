@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        
+ map<int,int>A;
+        for(auto a:nums)
+        {
+            A[a]++;
+        }
+        for(auto a:A)
+        {
+            if(a.second>1)
+            {
+                return true;
+            }
+        }
+        return false;
+        
+    }
+};
